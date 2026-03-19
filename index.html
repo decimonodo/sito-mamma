@@ -3,52 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <title>Gerardina Zaccanigno – Arte su tela</title>
+
 <style>
 body {
   margin: 0;
-  background: #0f0f0f;
+  background: #0a0a0a;
   color: white;
-  font-family: Arial;
+  font-family: 'Segoe UI', Arial;
 }
 
+/* HEADER */
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px 40px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 
+header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
 }
 
+/* CARD */
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* IMAGE */
 .card img {
   width: 100%;
-  display: block;
+  height: 400px;
+  object-fit: cover;
+  transition: 0.4s;
 }
 
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* INFO */
 .info {
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
   color: #ccc;
+  font-size: 18px;
 }
 
+/* WHATSAPP */
 .whatsapp {
   text-align: center;
-  margin: 40px;
+  margin: 60px;
 }
 
 .whatsapp a {
   background: #25D366;
   color: white;
-  padding: 15px 25px;
+  padding: 15px 30px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.whatsapp a:hover {
+  background: #1ebe5d;
 }
 </style>
 </head>
@@ -57,20 +95,21 @@ header h1 {
 
 <header>
   <h1>Gerardina Zaccanigno</h1>
-  <p>Artista</p>
+  <p>Arte su tela</p>
 </header>
 
 <section class="gallery">
 
-<div class="card">
-  <img src="madonna.jpeg">
-  <div class="info">Madonna</div>
-</div>
+  <div class="card">
+    <img src="madonna.jpeg">
+    <div class="info">Madonna</div>
+  </div>
 
-<div class="card">
-  <img src="sadhu.jpeg">
-  <div class="info">Sadhu</div>
-</div>
+  <div class="card">
+    <img src="sadhu.jpeg">
+    <div class="info">Sadhu</div>
+  </div>
+
 </section>
 
 <div class="whatsapp">
