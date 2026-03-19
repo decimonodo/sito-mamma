@@ -32,7 +32,7 @@ header p {
 /* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   padding: 40px;
   max-width: 1200px;
@@ -54,15 +54,13 @@ header p {
 /* IMAGE */
 .card img {
   width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  background: #000;
+  height: 350px;
+  object-fit: cover;
   transition: 0.4s;
 }
 
 .card img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* INFO */
@@ -93,30 +91,7 @@ header p {
   background: #1ebe5d;
 }
 
-/* SCROLLER */
-@keyframes scrollGallery {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.scroller {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 40px 0;
-}
-
-.scroller-track {
-  display: inline-flex;
-  gap: 30px;
-  animation: scrollGallery 20s linear infinite;
-}
-
-.scroller img {
-  height: 300px;
-  border-radius: 10px;
-}
-
-/* MODAL (immagine grande) */
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -150,40 +125,7 @@ header p {
 </header>
 
 <section class="gallery">
-<div class="card">
-  <a href="#img3">
-    <img src="mani.jpeg">
-  </a>
-  <div class="info">Mani</div>
-</div>
 
-<div class="card">
-  <a href="#img4">
-    <img src="musicista.jpeg">
-  </a>
-  <div class="info">Musicista</div>
-</div>
-
-<div class="card">
-  <a href="#img5">
-    <img src="stanza.jpeg">
-  </a>
-  <div class="info">Interno</div>
-</div>
-
-<div class="card">
-  <a href="#img6">
-    <img src="violinista.jpeg">
-  </a>
-  <div class="info">Violinista</div>
-</div>
-
-<div class="card">
-  <a href="#img7">
-    <img src="bambino.jpeg">
-  </a>
-  <div class="info">Bambino</div>
-</div>
   <div class="card">
     <a href="#img1">
       <img src="madonna.jpeg">
@@ -198,35 +140,51 @@ header p {
     <div class="info">Sadhu</div>
   </div>
 
-</section>
-
-<!-- SCROLLER -->
-<div class="scroller">
-  <div class="scroller-track">
-    <img src="madonna.jpeg">
-    <img src="sadhu.jpeg">
-    <img src="madonna.jpeg">
-    <img src="sadhu.jpeg">
+  <div class="card">
+    <a href="#img3">
+      <img src="mani.jpeg">
+    </a>
+    <div class="info">Mani</div>
   </div>
-</div>
+
+  <div class="card">
+    <a href="#img4">
+      <img src="musicista.jpeg">
+    </a>
+    <div class="info">Musicista</div>
+  </div>
+
+  <div class="card">
+    <a href="#img5">
+      <img src="stanza.jpeg">
+    </a>
+    <div class="info">Interno</div>
+  </div>
+
+  <div class="card">
+    <a href="#img6">
+      <img src="violinista.jpeg">
+    </a>
+    <div class="info">Violinista</div>
+  </div>
+
+</section>
 
 <div class="whatsapp">
   <a href="https://wa.me/393281868258">Contattami</a>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL IMMAGINI -->
+
 <div id="img1" class="modal">
-  <a href="#">
-    <img class="modal-content" src="madonna.jpeg">
-  </a>
+  <a href="#"><img class="modal-content" src="madonna.jpeg"></a>
 </div>
 
 <div id="img2" class="modal">
-  <a href="#">
-    <img class="modal-content" src="sadhu.jpeg">
-  </a>
+  <a href="#"><img class="modal-content" src="sadhu.jpeg"></a>
 </div>
-  <div id="img3" class="modal">
+
+<div id="img3" class="modal">
   <a href="#"><img class="modal-content" src="mani.jpeg"></a>
 </div>
 
@@ -240,10 +198,6 @@ header p {
 
 <div id="img6" class="modal">
   <a href="#"><img class="modal-content" src="violinista.jpeg"></a>
-</div>
-
-<div id="img7" class="modal">
-  <a href="#"><img class="modal-content" src="bambino.jpeg"></a>
 </div>
 
 </body>
