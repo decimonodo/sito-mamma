@@ -12,7 +12,6 @@ body {
   font-family: 'Segoe UI', Arial;
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 80px 20px 40px;
@@ -21,13 +20,10 @@ header {
 header h1 {
   margin: 0;
   font-size: 42px;
-  letter-spacing: 2px;
 }
 
 header p {
   color: #aaa;
-  margin-top: 10px;
-  font-size: 18px;
 }
 
 /* GALLERY */
@@ -45,7 +41,6 @@ header p {
   background: #111;
   border-radius: 12px;
   overflow: hidden;
-  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -57,11 +52,6 @@ header p {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  transition: 0.4s;
-}
-
-.card img:hover {
-  transform: scale(1.05);
 }
 
 /* INFO */
@@ -69,7 +59,6 @@ header p {
   padding: 15px;
   text-align: center;
   color: #ccc;
-  font-size: 18px;
 }
 
 /* WHATSAPP */
@@ -84,32 +73,24 @@ header p {
   padding: 15px 30px;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.whatsapp a:hover {
-  background: #1ebe5d;
 }
 
 /* MODAL */
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,0.95);
+  top: 0;
+  left: 0;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
+.modal img {
   max-width: 90%;
-  max-height: 85%;
+  max-height: 90%;
+  margin: 5% auto;
+  display: block;
 }
 
 .modal:target {
@@ -128,44 +109,32 @@ header p {
 <section class="gallery">
 
   <div class="card">
-    <a href="#img1">
-      <img src="madonna.jpeg">
-    </a>
+    <a href="#img1"><img src="madonna.jpeg"></a>
     <div class="info">Madonna</div>
   </div>
 
   <div class="card">
-    <a href="#img2">
-      <img src="sadhu.jpeg">
-    </a>
+    <a href="#img2"><img src="sadhu.jpeg"></a>
     <div class="info">Sadhu</div>
   </div>
 
   <div class="card">
-    <a href="#img3">
-      <img src="mani.jpeg">
-    </a>
+    <a href="#img3"><img src="mani.jpeg"></a>
     <div class="info">Mani</div>
   </div>
 
   <div class="card">
-    <a href="#img4">
-      <img src="musicista.jpeg">
-    </a>
+    <a href="#img4"><img src="musicista.jpeg"></a>
     <div class="info">Musicista</div>
   </div>
 
   <div class="card">
-    <a href="#img5">
-      <img src="stanza.jpeg">
-    </a>
+    <a href="#img5"><img src="stanza.jpeg"></a>
     <div class="info">Interno</div>
   </div>
 
   <div class="card">
-    <a href="#img6">
-      <img src="violinista.jpeg">
-    </a>
+    <a href="#img6"><img src="violinista.jpeg"></a>
     <div class="info">Violinista</div>
   </div>
 
@@ -177,29 +146,12 @@ header p {
 
 <!-- MODALI -->
 
-<div id="img1" class="modal">
-  <a href="#"><img class="modal-content" src="madonna.jpeg"></a>
-</div>
-
-<div id="img2" class="modal">
-  <a href="#"><img class="modal-content" src="sadhu.jpeg"></a>
-</div>
-
-<div id="img3" class="modal">
-  <a href="#"><img class="modal-content" src="mani.jpeg"></a>
-</div>
-
-<div id="img4" class="modal">
-  <a href="#"><img class="modal-content" src="musicista.jpeg"></a>
-</div>
-
-<div id="img5" class="modal">
-  <a href="#"><img class="modal-content" src="stanza.jpeg"></a>
-</div>
-
-<div id="img6" class="modal">
-  <a href="#"><img class="modal-content" src="violinista.jpeg"></a>
-</div>
+<div id="img1" class="modal"><a href="#"><img src="madonna.jpeg"></a></div>
+<div id="img2" class="modal"><a href="#"><img src="sadhu.jpeg"></a></div>
+<div id="img3" class="modal"><a href="#"><img src="mani.jpeg"></a></div>
+<div id="img4" class="modal"><a href="#"><img src="musicista.jpeg"></a></div>
+<div id="img5" class="modal"><a href="#"><img src="stanza.jpeg"></a></div>
+<div id="img6" class="modal"><a href="#"><img src="violinista.jpeg"></a></div>
 
 </body>
 </html>
