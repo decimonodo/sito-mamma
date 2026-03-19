@@ -115,6 +115,30 @@ header p {
   height: 300px;
   border-radius: 10px;
 }
+
+/* MODAL (immagine grande) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85%;
+}
+
+.modal:target {
+  display: block;
+}
 </style>
 </head>
 
@@ -128,12 +152,16 @@ header p {
 <section class="gallery">
 
   <div class="card">
-    <img src="madonna.jpeg">
+    <a href="#img1">
+      <img src="madonna.jpeg">
+    </a>
     <div class="info">Madonna</div>
   </div>
 
   <div class="card">
-    <img src="sadhu.jpeg">
+    <a href="#img2">
+      <img src="sadhu.jpeg">
+    </a>
     <div class="info">Sadhu</div>
   </div>
 
@@ -151,6 +179,19 @@ header p {
 
 <div class="whatsapp">
   <a href="https://wa.me/393281868258">Contattami</a>
+</div>
+
+<!-- MODAL -->
+<div id="img1" class="modal">
+  <a href="#">
+    <img class="modal-content" src="madonna.jpeg">
+  </a>
+</div>
+
+<div id="img2" class="modal">
+  <a href="#">
+    <img class="modal-content" src="sadhu.jpeg">
+  </a>
 </div>
 
 </body>
